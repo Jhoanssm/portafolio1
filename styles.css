@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -19,6 +24,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+}
+.navbar .photo {
+    margin-right: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .navbar .logo h1 {
@@ -30,6 +43,8 @@ header {
     list-style-type: none;
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .navbar .nav-links li a {
@@ -58,6 +73,21 @@ header {
 #intro p {
     font-size: 18px;
     margin-bottom: 20px;
+}
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6b4fd9;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .cta-button {
@@ -133,6 +163,18 @@ header {
     border-radius: 5px;
 }
 
+.testimonio {
+    width: 100%;
+    display: flex;
+    background-color: #f1faee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: solid;
+    gap: 35px;
+}
+
 .project-card {
     background-color: #fff;
     padding: 20px;
@@ -146,10 +188,33 @@ header {
     margin-bottom: 10px;
 }
 
+.contacto{
+    color: #2811d4ff;
+    text-align: center;
+    padding: 100px 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los elementos */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2b2d42;
+    background-color: #3e49bc;
     color: #fff;
 }
 
@@ -165,15 +230,25 @@ footer {
     #intro h2 {
         font-size: 28px;
     }
+    
 
     .navbar .nav-links {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 20px;
     }
 
     .skills-list {
         grid-template-columns: 1fr 1fr;
     }
+
+.testimonio{
+    gap: 20px;
+    flex-direction: column;
+}
 }
 
 @media (max-width: 480px) {
